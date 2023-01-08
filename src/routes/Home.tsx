@@ -1,11 +1,13 @@
 import { makeStyles } from "@material-ui/core";
-import Background from "../parts/Background";
-import Footer from "../parts/Footer";
-import Header from "../parts/Header";
+import { WHITE } from "../foundations/colors";
+import HomeBackground from "../parts/HomeBackground";
+
 const useStyles = makeStyles({
     text: {
+        color: WHITE,
         fontSize: 176,
-        paddingLeft:'5%'
+        paddingLeft:'5%',
+        opacity: 0.8
     }
 });
 
@@ -13,10 +15,8 @@ const Home = () => {
     const classes = useStyles();
     return (
         <div>
-            <Background />
-            <Header />
+            <HomeBackground />
             <p className={classes.text}>Thank you for coming this page</p>
-            <Footer />
         </div>
 
     )

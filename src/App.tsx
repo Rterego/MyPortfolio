@@ -1,8 +1,11 @@
+import { makeStyles } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import './App.css';
 import { PURPLE_BASE } from './foundations/colors';
+import Footer from './parts/Footer';
+import Header from './parts/Header';
 import Home from './routes/Home';
 import Links from './routes/Links';
 import NoMatch from './routes/nomatch';
@@ -20,17 +23,33 @@ const theme = createTheme({
   },
 });
 
+const useStyles = makeStyles({
+  body: {
+    display: 'flex',
+    flexFlow: 'column',
+    minHeight: '100vh'
+  },
+  main: {
+    flex: 1
+  }
+});
+
 function App() {
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.body}>
       <ThemeProvider theme={theme}>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/works' element={<Works />} />
-          <Route path='/links' element={<Links />} />
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
+        <Header />
+        <main className={classes.main}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/works' element={<Works />} />
+            <Route path='/links' element={<Links />} />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+        </main>
+        <Footer />
       </ThemeProvider>
     </div>
   );

@@ -1,28 +1,26 @@
 import React from "react";
-import { AppBar, Box, makeStyles, Toolbar } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import { PURPLE_BASE, WHITE } from "../foundations/colors";
 
 const useStyles = makeStyles({
   footer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    margin: "auto",
+    marginTop: 'auto',
+    background: PURPLE_BASE,
+    textAlign: "right"
+  },
+  text: {
+    color: WHITE,
+    marginRight: "20px"
   }
 });
 
 const Footer = () => {
   const classes = useStyles();
-  return <div className={classes.footer}>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={0}>
-        <Toolbar>
-          <div style={{ flexGrow: 1 }}></div>
-          <p>Mail: ryuforsykt@gmail.com</p>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  </div>;
+  return (
+    <footer className={classes.footer}>
+      <p className={classes.text}>Mail: ryuforsykt@gmail.com</p>
+    </footer>
+  )
 };
 
 export default Footer;

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     }
   });
 
-const Background = () => {
+const HomeBackground = () => {
     const classes = useStyles();
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
@@ -104,11 +104,11 @@ const Background = () => {
                       "detect_on": "canvas",
                       "events": {
                         "onhover": {
-                          "enable": true,
+                          "enable": false,
                           "mode": "repulse"
                         },
                         "onclick": {
-                          "enable": true,
+                          "enable": false,
                           "mode": "push"
                         },
                         "resize": true
@@ -141,7 +141,7 @@ const Background = () => {
                     },
                     "retina_detect": true,
                     "background": {
-                        "color": "#333",
+                        "color": "#000",
                         "image": "",
                         "position": "50% 50%",
                         "size": "cover"
@@ -151,4 +151,4 @@ const Background = () => {
     )
 };
 
-export default Background;
+export default HomeBackground;
