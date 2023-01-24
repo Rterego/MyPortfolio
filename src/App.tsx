@@ -27,7 +27,8 @@ const useStyles = makeStyles({
   body: {
     display: 'flex',
     flexFlow: 'column',
-    minHeight: '100vh'
+    minHeight: '100vh',
+    width: '100%'
   },
   main: {
     flex: 1

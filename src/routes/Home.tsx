@@ -5,9 +5,11 @@ import HomeBackground from "../parts/HomeBackground";
 const useStyles = makeStyles({
     text: {
         color: WHITE,
-        fontSize: 176,
-        paddingLeft:'5%',
-        opacity: 0.8
+        fontSize: '4.5rem',
+        paddingLeft: '5%',
+        maxWidth: '90%',
+        opacity: 0.8,
+        textAlign:'center'
     }
 });
 
