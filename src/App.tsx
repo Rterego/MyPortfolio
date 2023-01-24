@@ -43,11 +43,11 @@ function App() {
         <Header />
         <main className={classes.main}>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/works' element={<Works />} />
-            <Route path='/links' element={<Links />} />
-            <Route path="*" element={<NoMatch />} />
+            <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+            <Route path={`${process.env.PUBLIC_URL}/profile`}  element={<Profile />} />
+            <Route path={`${process.env.PUBLIC_URL}/works`}  element={<Works />} />
+            <Route path={`${process.env.PUBLIC_URL}/links`}  element={<Links />} />
+            <Route path={`*`}  element={<NoMatch />} />
           </Routes>
         </main>
         <Footer />
