@@ -20,10 +20,10 @@ const Header = () => {
             <Avatar src={icon}></Avatar>
           </Button>
           <div style={{ flexGrow: 1 }}></div>
-          <Button color="inherit" href='/'>ホーム</Button>
-          <Button color="inherit" href='/profile'>プロフィール</Button>
-          <Button color="inherit" href='/works'>作品</Button>
-          <Button color="inherit" href='/links'>リンク</Button>
+          <Button color="inherit" href={`${process.env.PUBLIC_URL}/`}>ホーム</Button>
+          <Button color="inherit" href={`${process.env.PUBLIC_URL}/profile`}>プロフィール</Button>
+          <Button color="inherit" href={`${process.env.PUBLIC_URL}/works`}>作品</Button>
+          <Button color="inherit" href={`${process.env.PUBLIC_URL}/links`}>リンク</Button>
         </Toolbar>
       </AppBar>
     </Box>
