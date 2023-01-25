@@ -16,7 +16,7 @@ const Header = () => {
     <Box sx={styles.Box}>
       <AppBar position="static" elevation={0}>
         <Toolbar>
-          <Button href='/'>
+          <Button href={`${process.env.PUBLIC_URL}/`}>
             <Avatar src={icon}></Avatar>
           </Button>
           <div style={{ flexGrow: 1 }}></div>
