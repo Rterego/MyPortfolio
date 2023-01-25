@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <div>
             <HomeBackground />
-            <p className={classes.text}>Thank you for coming this page</p>
+            <p className={classes.text}>Thank you for coming this website</p>
         </div>
 
     )

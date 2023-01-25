@@ -43,7 +43,7 @@ const Profile = () => {
                 </div>
                 <div className={classes.item}>
                     <p><span className={classes.subtitle}>学歴</span></p>
-                    <p>埼玉県立坂戸高校　卒業（2020年3月）</p>
+                    <p>埼玉県立坂戸高等学校　卒業（2020年3月）</p>
                     <p>東京電機大学　未来科学部　情報メディア学科　入学（2020年4月）</p>
                     <p>東京電機大学　未来科学部　情報メディア学科　卒業見込み（2024年3月）</p>
 
